@@ -131,15 +131,27 @@ footer a:hover {
   font-size: 14px;
   color: gray;
 }
+
+.post__delete {
+  cursor: pointer;
+}
 .post__delete:hover,
 .post__delete:focus {
   color: black;
 }
 .post__edit:hover,
-.post__edit:focus {
+.post__edit:focus,
+.post__edit a:hover,
+.post__edit a:focus {
   color: black;
 }
+.post__edit a {
+  text-decoration: none;
+  color: gray;
+}
 
+
+/* post detail */
 .post__detail .post__title {
   font-size: 36px;
   line-height: 40px;
@@ -158,6 +170,8 @@ footer a:hover {
   padding: 20px 0px;
 }
 
+
+/* Profile */
 .profile__box {
   display: flex;
   gap: 18px;
