@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
 
-export default function PostList() {
+interface PostListProps {
+  hasNavigation?: boolean;
+}
+
+export default function PostList({ hasNavigation = true }: PostListProps) {
   return (
     <>
-      <div className="post__navigation">
-        <div className="post__navigation-active">전체</div>
-        <div>나의 글</div>
-      </div>
+      {/* 이 부분은 home 페이지에서는 보이고
+    게시글(PostListPage), 프로필 페이지 에서는 보이면 안됨 */}
+      {hasNavigation && (
+        <div className="post__navigation">
+          <div className="post__navigation-active">전체</div>
+          <div>나의 글</div>
+        </div>
+      )}
 
       <div className="post__list">
         {[...Array(10)].map((e, index) => (
