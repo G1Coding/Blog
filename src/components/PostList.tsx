@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 
 export default function PostList() {
-    return(
-        <div className="post__list">
+  return (
+    <>
+      <div className="post__navigation">
+        <div className="post__navigation-active">전체</div>
+        <div>나의 글</div>
+      </div>
+
+      <div className="post__list">
         {[...Array(10)].map((e, index) => (
           <div key={index} className="post__box">
             <Link to={`/posts/${index}`}>
@@ -25,5 +31,7 @@ export default function PostList() {
             </Link>
           </div>
         ))}
-      </div>    )
+      </div>
+    </>
+  );
 }
